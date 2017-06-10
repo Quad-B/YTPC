@@ -1,0 +1,16 @@
+{
+  "name": "youtubeapp",
+  "version": "1.0.0",
+  "description": "Youtube App Web",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . --platform=win32 --arch=x64"
+  },
+  "author": "BoyPhongsakorn",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.6.10",
+    "electron-packager": "^8.7.1"
+  }
+}
