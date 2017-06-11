@@ -1,8 +1,9 @@
 const {app, BrowserWindow} = require('electron');
+const path = require('path');
 const url = require('url');
 require('electron-context-menu')({
     prepend: (params, browserWindow) => [{
-        label: 'Rainbow',
+        label: 'Save image not working',
         // Only show it when right-clicking images 
         visible: params.mediaType === 'image'
     }]
@@ -13,10 +14,10 @@ let win;
 
 function createWindow() {
 	// Create browser window
-	win = new BrowserWindow({width:800, height:600})
+	win = new BrowserWindow({width:800, height:600, icon:__dirname+'/img/youtubepcappicon.png'})
 
 	// Load index.html
-	win.loadURL('https://youtube.com');
+	win.loadURL('http://brsocial.esy.es/ytpc');
 
 	win.webContents.on('new-window', function(e, url) {
   	e.preventDefault();
