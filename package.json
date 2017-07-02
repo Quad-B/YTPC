@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "buildwin32": "electron-packager . --platform=win32 --arch=x64"
+    "build": "electron-packager ."
   },
   "author": "BoyPhongsakorn",
   "license": "ISC",
