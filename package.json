@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager ."
+    "build": "electron-packager . --all"
   },
   "author": "BoyPhongsakorn",
   "license": "ISC",
