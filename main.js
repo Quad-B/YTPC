@@ -14,7 +14,7 @@ let win;
 
 function createWindow() {
   // Create browser window
-  win = new BrowserWindow({width:800, height:600, icon:__dirname+'/img/youtubepcappicon.png'})
+  win = new BrowserWindow({width:800, height:600, icon:__dirname+'/img/youtubepcappicon.png',webPreferences: {'node-integration': false}})
 
   // Load index.html
   win.loadURL('file://' + __dirname + '/index.html');
@@ -24,14 +24,14 @@ function createWindow() {
   win.on('closed', () => {
     win = null;
   });
-}
+};
 
 // Run create window function
 app.on('ready', createWindow);
 
 // Quit when all windows are closed
 app.on('window-all-closed', () => {
-  if(process.platform !== 'win32'){
+  if(process.platform !== 'darwin'){
     app.quit();
   }
 });

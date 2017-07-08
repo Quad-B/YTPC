@@ -27,13 +27,6 @@ html, body, #foo {
     const webview = document.querySelector('webview')
     const indicator = document.querySelector('.indicator')
 
-    webview.addEventListener('new-window', (e) => {
-  	const protocol = require('url').parse(e.url).protocol
- 		if (protocol === 'http:' || protocol === 'https:') {
-    	document.getElementById('foo').src = 'https://www.onlinevideoconverter.com/' + foo.getURL()
-  		}
-	})
-
     const loadstart = (e) => {
       document.getElementById('downloadurl').href = 'https://www.onlinevideoconverter.com/' + foo.getURL();
     }
