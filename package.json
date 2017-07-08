@@ -11,9 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "electron-context-menu": "^0.9.1",
-    "electron-packager": "^8.7.1"
+    "electron-packager": "^8.7.1",
+    "jquery": "^3.2.1"
   },
   "devDependencies": {
-    "electron": "^1.6.10"
+    "electron": "^1.6.10",
+    "jquery": "^3.2.1"
   }
 }

@@ -17,12 +17,9 @@ function createWindow() {
   win = new BrowserWindow({width:800, height:600, icon:__dirname+'/img/youtubepcappicon.png'})
 
   // Load index.html
-  win.loadURL('http://brsocial.esy.es/ytpc');
+  win.loadURL('file://' + __dirname + '/index.html');
 
-  win.webContents.on('new-window', function(e, url) {
-    e.preventDefault();
-    require('electron').shell.openExternal(url);
-  });
+  win.maximize();
 
   win.on('closed', () => {
     win = null;
