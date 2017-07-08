@@ -20,7 +20,7 @@ html, body, #foo {
 </style>
 </head>
 <body>
-<webview id="foo" src="http://brsocial.esy.es/ytpc" allowpopups></webview>
+<webview id="foo" src="https://boyphongsakornweb.firebaseapp.com/ytpc.html" allowpopups></webview>
 <script>
   onload = () => {
   	const {shell} = require('electron')
@@ -39,6 +39,6 @@ html, body, #foo {
     webview.addEventListener('did-stop-loading', loadstop)
   }
 </script>
-<div id="download"><a id="downloadurl" href="" target="_black">ดาวน์โหลด วีดิโอนี้</a></div>
+<div id="download" style="display: none;"><a id="downloadurl" href="" target="_black">ดาวน์โหลด วีดิโอนี้</a></div>
 </body>
 </html>
