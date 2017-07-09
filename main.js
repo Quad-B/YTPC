@@ -24,6 +24,14 @@ function createWindow() {
   win.on('closed', () => {
     win = null;
   });
+
+  win.webContents.on('new-window', (event, url) => {
+  event.preventDefault()
+  const win = new BrowserWindow({show: false, webPreferences: {nodeIntegration: false}})
+  win.once('ready-to-show', () => win.show())
+  win.loadURL(url)
+  event.newGuest = win
+  });
 };
 
 // Run create window function
