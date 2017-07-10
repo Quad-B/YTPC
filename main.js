@@ -9,6 +9,8 @@ require('electron-context-menu')({
     }]
 });
 
+require('electron-dl')();
+
 // init win
 let win;
 
@@ -27,9 +29,13 @@ function createWindow() {
 
   win.webContents.on('new-window', (event, url) => {
   event.preventDefault()
-  const win = new BrowserWindow({show: false, webPreferences: {nodeIntegration: false}})
+  if(url === 'https://www.onlinevideoconverter.com/https://www.youtube.com/watch?v=') {
+  win = new BrowserWindow({show: false, webPreferences: {nodeIntegration: false}})
   win.once('ready-to-show', () => win.show())
   win.loadURL(url)
+} else {
+	return 0
+}
   event.newGuest = win
   });
 };
