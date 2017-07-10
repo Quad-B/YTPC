@@ -33,11 +33,11 @@ html, body, #foo {
     const indicator = document.querySelector('.indicator')
 
     const loadstart = (e) => {
-      document.getElementById('downloadurl').href = 'https://www.onlinevideoconverter.com/' + foo.getURL();
+      document.getElementById('downloadurl').href = 'http://keepvid.com/?url=' + foo.getURL();
     }
 
     const loadstop = (e) => {
-      document.getElementById('downloadurl').href = 'https://www.onlinevideoconverter.com/' + foo.getURL();
+      document.getElementById('downloadurl').href = 'http://keepvid.com/?url=' + foo.getURL();
     }
 
     webview.addEventListener('did-start-loading', loadstart)

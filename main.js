@@ -28,15 +28,18 @@ function createWindow() {
   });
 
   win.webContents.on('new-window', (event, url) => {
+  if(/^([www.onlinevideoconverter.com/https://]?)/m.test(url)) {
   event.preventDefault()
-  if(url === 'https://www.onlinevideoconverter.com/https://www.youtube.com/watch?v=') {
   win = new BrowserWindow({show: false, webPreferences: {nodeIntegration: false}})
   win.once('ready-to-show', () => win.show())
   win.loadURL(url)
-} else {
-	return 0
-}
+  win.webContents.on('did-finish-load', function() {
+ 	win.webContents.insertCSS('div#lx_585909 {display: none;} div#taboola-below-main-column-thumbnails {display: none;}')
+	});
   event.newGuest = win
+} else {
+	win = new BrowserWindow({show: false})
+}
   });
 };
 
