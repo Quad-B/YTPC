@@ -8,7 +8,21 @@
     "build": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=img/saoxlogo.ico --prune=true --version-string.CompanyName=\"BoyPhongsakorn Network\" --version-string.FileDescription=\"You watch Tube on PC\" --version-string.ProductName=\"YTPC\""
   },
   "author": "BoyPhongsakorn",
-  "license": "ISC",
+  "license": "MIT",
+  "build": {
+    "appId": "com.boyphongsakorn.saox",
+    "copyright": "copyright © 2019 Quad B Software",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        },{"target": "portable"}
+      ],"compression": "maximum"
+    }
+  },
   "dependencies": {
     "electron-context-menu": "^0.9.1",
     "electron-dl": "^1.10.0",
