@@ -27,3 +27,4 @@ install:
   - npm install --global release-it
 script:
   - electron-builder -w --publish "never"
+  - release-it 1.5.4 --config .release-it.json --no-npm.publish --no-git
