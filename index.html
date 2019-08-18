@@ -17,33 +17,27 @@ html, body, #foo {
     bottom: 0px;
     width: 100%;
 }
-
-#peoplecheck {
-    height: 0px;
-    height: 0px;
-}
 </style>
 </head>
 <body>
-<webview id="foo" src="https://youtube.com"></webview>
+<webview id="foo" src="https://www.youtube.com/"></webview>
 <script>
   onload = () => {
-  	const {shell} = require('electron')
     const webview = document.querySelector('webview')
     const indicator = document.querySelector('.indicator')
 
     const loadstart = (e) => {
-      document.getElementById('downloadurl').href = 'https://www.youtubeconverter.io/?suggest=' + foo.getURL();
+      document.getElementById('downloadurl').href = 'https://th.savefrom.net/#url=' + foo.getURL();
     }
 
     const loadstop = (e) => {
-      document.getElementById('downloadurl').href = 'https://www.youtubeconverter.io/?suggest=' + foo.getURL();
+      document.getElementById('downloadurl').href = 'https://th.savefrom.net/#url=' + foo.getURL();
     }
 
     webview.addEventListener('did-start-loading', loadstart)
     webview.addEventListener('did-stop-loading', loadstop)
   }
 </script>
-<div id="download"><a id="downloadurl" href="" target="_black">ดาวน์โหลด วีดิโอนี้</a><webview id="peoplecheck" src="https://boyphongsakornytpc.firebaseapp.com/"></webview></div>
+<div id="download"><a id="downloadurl" href="" target="_black">ดาวน์โหลด วีดิโอนี้</a></div>
 </body>
 </html>

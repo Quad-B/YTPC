@@ -16,7 +16,7 @@ let win;
 
 function createWindow() {
   // Create browser window
-  win = new BrowserWindow({width:800, height:600, icon:__dirname+'/img/youtubepcappicon.png',webPreferences: {'node-integration': false}})
+  win = new BrowserWindow({width:800, height:600, icon:__dirname+'/img/youtubepcappicon.png',webPreferences: { webviewTag: true }})
 
   // Load index.html
   win.loadURL('file://' + __dirname + '/index.html');
@@ -29,7 +29,7 @@ function createWindow() {
 
   win.webContents.on('new-window', (event, url) => {
   event.preventDefault()
-  win = new BrowserWindow({show: false, webPreferences: {nodeIntegration: false}})
+  win = new BrowserWindow({show: false})
   win.once('ready-to-show', () => win.show())
   win.loadURL(url)
   event.newGuest = win
