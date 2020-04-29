@@ -27,7 +27,7 @@
     "electron-context-menu": "^0.9.1",
     "electron-dl": "^1.10.0",
     "electron-packager": "^8.7.2",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   },
   "devDependencies": {
     "electron": "^6.0.2"
