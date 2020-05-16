@@ -1,6 +1,6 @@
 {
   "name": "youtubeapp",
-  "version": "2.0.0",
+  "version": "2.5.0",
   "description": "Youtube App Web",
   "main": "main.js",
   "scripts": {
