@@ -33,4 +33,4 @@ script:
   - cd dist
   - dir
   - cd -
-  - release-it 2.0.0 --config .release-it.json --no-npm.publish --no-git
+  - release-it 2.5.0 --config .release-it.json --no-npm.publish --no-git
