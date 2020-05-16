@@ -19,17 +19,21 @@
           "arch": [
             "ia32"
           ]
-        },{"target": "portable"}
-      ],"compression": "maximum"
+        },
+        {
+          "target": "portable"
+        }
+      ],
+      "compression": "maximum"
     }
   },
   "dependencies": {
     "electron-context-menu": "^0.9.1",
-    "electron-dl": "^1.10.0",
+    "electron-dl": "^1.14.0",
     "electron-packager": "^8.7.2",
-    "jquery": "^3.5.0"
+    "jquery": "^3.5.1"
   },
   "devDependencies": {
-    "electron": "^6.0.2"
+    "electron": "^6.1.11"
   }
 }
