@@ -16,7 +16,7 @@ let win;
 
 function createWindow() {
   // Create browser window
-  win = new BrowserWindow({width:800, height:600, icon:__dirname+'/img/youtubepcappicon.png',webPreferences: { webviewTag: true }})
+  win = new BrowserWindow({width:800, height:600, icon:__dirname+'/img/youtubepcappicon.png',autoHideMenuBar: true,webPreferences: { webviewTag: true }})
 
   // Load index.html
   win.loadURL('file://' + __dirname + '/index.html');
