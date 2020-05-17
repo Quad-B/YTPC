@@ -29,7 +29,7 @@ function createWindow() {
 
   win.webContents.on('new-window', (event, url) => {
   event.preventDefault()
-  win = new BrowserWindow({show: false})
+  win = new BrowserWindow({show: false,autoHideMenuBar: true})
   win.once('ready-to-show', () => win.show())
   win.loadURL(url)
   event.newGuest = win
