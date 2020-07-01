@@ -21,23 +21,78 @@ html, body, #foo {
 </head>
 <body>
 <webview id="foo" src="https://www.youtube.com/"></webview>
+
 <script>
+
+  const { remote } = require('electron')
+  const { Menu, MenuItem } = remote
+  const customTitlebar = require('custom-electron-titlebar');
+
+  let MyTitleBar = new customTitlebar.Titlebar({
+    backgroundColor: customTitlebar.Color.fromHex('#444'),
+    shadow: true
+  });
+
+  const isMac = process.platform === 'darwin'
+
+  const menu = new Menu();
+
+  menu.append(new MenuItem({
+    label: 'เมนูหลัก',
+    submenu: [
+      isMac ? { label: 'ปิด',role: 'close' } : { label: 'ออกจากโปรแกรม',role: 'quit' }
+    ]
+  }));
+
+  MyTitleBar.updateMenu(menu);
+
+  MyTitleBar.updateTitle('YTPC');
+
   onload = () => {
     const webview = document.querySelector('webview')
     const indicator = document.querySelector('.indicator')
 
     const loadstart = (e) => {
-      document.getElementById('downloadurl').href = 'https://th.savefrom.net/#url=' + foo.getURL();
+      
+      updatedownload()
+
     }
 
-    const loadstop = (e) => {
-      document.getElementById('downloadurl').href = 'https://th.savefrom.net/#url=' + foo.getURL();
-    }
+     const loadstop = (e) => {
+      
+      updatedownload()
+
+    } 
 
     webview.addEventListener('did-start-loading', loadstart)
     webview.addEventListener('did-stop-loading', loadstop)
   }
+  
+  function updatedownload() {
+    if (foo.getURL().search("watch") >= 0) {
+      
+    const menu = new Menu();
+
+      menu.append(new MenuItem({
+        label: 'เมนูหลัก',
+        submenu: [
+          {
+            label: 'ดาว์นโหลด วิดีโอนี้',
+            click: async () => {
+              const { shell } = require('electron')
+              await shell.openExternal('https://th.savefrom.net/#url=' + foo.getURL())
+            }
+          },
+          isMac ? { label: 'ปิด',role: 'close' } : { label: 'ออกจากโปรแกรม',role: 'quit' }
+        ]
+      }));
+
+      MyTitleBar.updateMenu(menu);
+
+    }
+  }
+
 </script>
-<div id="download"><a id="downloadurl" href="" target="_black">ดาวน์โหลด วีดิโอนี้</a></div>
+
 </body>
 </html>

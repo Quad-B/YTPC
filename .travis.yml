@@ -31,8 +31,8 @@ install:
   # npm install run-async --save
   - npm install --global release-it
 script:
-  - electron-builder -w --publish "never"
-  - cd dist
-  - dir
-  - cd -
-  - release-it 2.5.1 --config .release-it.json --no-npm.publish --no-git
+  - electron-builder -w --publish "always" -c.snap.publish=github
+  # - cd dist
+  # - dir
+  # - cd -
+  # - release-it 2.5.1 --config .release-it.json --no-npm.publish --no-git

@@ -1,6 +1,6 @@
 {
   "name": "youtubeapp",
-  "version": "2.5.1",
+  "version": "2.6.0",
   "description": "Youtube App Web",
   "main": "main.js",
   "scripts": {
@@ -28,6 +28,7 @@
     }
   },
   "dependencies": {
+    "custom-electron-titlebar": "^3.2.2-hotfix62",
     "electron-context-menu": "^0.9.1",
     "electron-dl": "^1.14.0",
     "electron-packager": "^8.7.2",
