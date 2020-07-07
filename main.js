@@ -23,6 +23,8 @@ function createWindow() {
 
   win.maximize();
 
+  win.webContents.openDevTools()
+
   win.on('closed', () => {
     win = null;
   });

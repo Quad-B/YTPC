@@ -89,6 +89,19 @@ html, body, #foo {
 
       MyTitleBar.updateMenu(menu);
 
+    } else {
+
+      const menu = new Menu();
+
+      menu.append(new MenuItem({
+        label: 'เมนูหลัก',
+        submenu: [
+          isMac ? { label: 'ปิด',role: 'close' } : { label: 'ออกจากโปรแกรม',role: 'quit' }
+        ]
+      }));
+
+      MyTitleBar.updateMenu(menu);
+
     }
   }
 
