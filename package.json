@@ -31,8 +31,9 @@
     "custom-electron-titlebar": "^3.2.2-hotfix62",
     "electron-context-menu": "^0.9.1",
     "electron-dl": "^1.14.0",
-    "electron-packager": "^8.7.2",
     "jquery": "^3.5.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "electron": "^11.2.1"
+  }
 }
