@@ -95,9 +95,9 @@ html, body, #foo {
 
       menu.append(new MenuItem({
         label: 'เมนูหลัก',
-        submenu: [
-          isMac ? { label: 'ปิด',role: 'close' } : { label: 'ออกจากโปรแกรม',role: 'quit' }
-        ]
+        click: async () => {
+          window.close();
+        }
       }));
 
       MyTitleBar.updateMenu(menu);
