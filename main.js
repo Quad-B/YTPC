@@ -16,7 +16,19 @@ let win;
 
 function createWindow() {
   // Create browser window
-  win = new BrowserWindow({width:800, height:600, icon:__dirname+'/img/youtubepcappicon.png',autoHideMenuBar: true,frame: false,webPreferences: { webviewTag: true,nodeIntegration: true }})
+  win = new BrowserWindow({
+    width:800, 
+    height:600, 
+    icon:__dirname+'/img/youtubepcappicon.png',
+    autoHideMenuBar: true,
+    frame: false,
+    webPreferences: { 
+      webviewTag: true,
+      nodeIntegration: true ,
+      enableRemoteModule: true,
+      contextIsolation: false
+    }
+  })
 
   // Load index.html
   win.loadURL('file://' + __dirname + '/index.html');
