@@ -20,7 +20,7 @@ before_install:
   - sudo aptitude install -y winehq-stable
 install:
   - npm install --global yarn
-  - npm uninstall electron-builder --save-dev
+  # npm uninstall electron-builder --save-dev
   - yarn global add electron-builder
   - npm update
   - npm audit fix
