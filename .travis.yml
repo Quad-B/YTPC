@@ -1,7 +1,7 @@
 sudo: required
 dist: xenial
 language: node_js
-node_js: '10'
+node_js: '12'
 before_install:
   - sudo apt update
   - sudo apt install build-essential
