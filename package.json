@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "custom-electron-titlebar": "^3.2.6",
-    "electron-context-menu": "^2.5.1",
+    "electron-context-menu": "^3.6.0",
     "electron-dl": "^3.2.1",
     "jquery": "^3.6.0"
   },
